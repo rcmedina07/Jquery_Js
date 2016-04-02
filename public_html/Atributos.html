@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>FocusBlur</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../js/jquery-2.0.0.js"></script>
+        <script type="text/javascript">
+            var x;
+            x=$(document);
+            x.ready(inicializar);
+            
+            function inicializar(){
+                  var x;
+                  x=$("#usuario");
+                  x.focus(enfocar);
+                  x.blur(desenfocar);
+            }            
+            function enfocar(){
+                var x;
+                x=$("#usuario");
+                x.attr("value","");
+             }    
+             function desenfocar(){
+                var x;
+                x=$("#usuario");
+                x.attr("value","Usuario");
+             }  
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="usuario" type="text" value="Usuario"> 
+            <input value="Aceptar" type="button"> 
+        </form>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Alert</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script type="text/javascript" src="../js/jquery-2.0.0.js"></script>
+        <script type="text/javascript">
+            var x;
+            x=$(document);
+            x.ready(inicializar);
+            
+            function inicializar(){
+                   var x;
+                   x=$("#boton1");
+                   x.click(leer);
+                   x=$("#boton2");
+                   x.click(escribir);
+            }            
+            function leer(){
+                 var x=$("p");
+                 alert(x.text());
+             }
+            function escribir(){
+                 var x=$("p");
+                 x.text("Nuevo texto");
+            }           
+        </script>
+    </head>
+    <body>
+        <input type="button" id="boton1" value="Leer">
+         <input type="button" id="boton2" value="Escribir">
+         <p>Este es el texto actual</p> 
+          
+    </body>
+</html>

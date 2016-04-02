@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Moviendo el mouse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../js/jquery-2.0.0.js"></script>
+        <script type="text/javascript">
+            var x;
+            x=$(document);
+            x.ready(inicializar);
+            
+            function inicializar(){
+                   var x;
+                   x=$(document);                    
+                 x.mousemove(capturarMovida);
+                 // x.on("mousemove",capturarMovida);
+                  
+            }            
+            function capturarMovida(event){
+                 var x;                 
+                 x=$("#x");
+                 x.text("Coordenada X: "+event.clientX );                 
+                 x=$("#y");
+                 x.text("Coordenada Y: "+event.clientY );
+             }                         
+        </script>
+    </head>
+    <body>
+         <div id="x"></div>
+         <div id="y"></div>
+    </body>
+</html>
